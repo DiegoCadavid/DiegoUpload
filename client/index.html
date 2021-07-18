@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/global.css">
+
+    <title>Diego Upload</title>
+</head>
+
+<body>
+
+    <div id='panelCreateDir'>
+        <div>
+            <h2>Crear directorio</h2>
+            <form action="" id="formdir">
+                <input type="text" name="" id="createDirText" placeholder="Nombre...">
+                <br>
+                <input type="button" value="cancelar" id="cancelCreateDir">
+                <input type="button" value="confirmar" id="confirmCreateDir">
+            </form>
+        </div>
+    </div>
+
+    <div id="mainContent">
+        <div id="menu">
+            <form action="" id="formid">
+                <input type="file" name="uploadFile" id="uploadFileElement" hidden multiple>
+                <input type="button" value="" id="buttonUpload">
+                <input type="button" value="" id="buttonCreateDir">
+                <input type="button" value="" id="buttonDeleteDir">
+                <input type="button" value="" id="buttonDeleteFile">
+                <input type="button" value="" id="buttonSearch">
+            </form>
+        </div>
+        <div id="content">
+        </div>
+        <div id="leftContent"> 
+        </div>
+    </div>
+
+    <!-- Crear un menu de configuracion que me permita cambiar la resolucion de los preview y los 3 colores base -->
+    <!-- Hacer que al eliminar haya una confirmacion -->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+
+
+
+</body>
+
+</html>

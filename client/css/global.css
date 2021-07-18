@@ -1,0 +1,382 @@
+:root {
+    --mainColor: rgb(35, 35, 35);
+    --navColor: rgb(33, 33, 33);
+    --carpetColor: rgb(43, 43, 43);
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#mainContent {
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+#mainContent>#menu {
+    display: block;
+    background-color: var(--navColor);
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 50px;
+}
+
+#content {
+    display: block;
+    margin: auto;
+    width: 100%;
+    overflow: auto;
+}
+
+#content>p {
+    color: white;
+}
+
+div>button {
+    box-sizing: border-box;
+    background-color: transparent;
+    display: inline-block;
+    cursor: pointer;
+}
+
+div>p {
+    font-weight: 600;
+}
+
+div>button>p {
+    color: white;
+}
+
+form {
+    display: inline-block;
+    position: relative;
+    width: 95%;
+    top: 13%;
+    left: 2.5%;
+}
+
+form>* {
+    vertical-align: middle;
+    border: none;
+    padding: 0;
+}
+
+#menu>form>input[type="button"] {
+    height: 35px;
+    width: 35px;
+    margin-left: 10px;
+
+    background-color: transparent;
+
+    /* Icon image */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+
+
+#panelCreateDir {
+    position: fixed;
+
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.726);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#panelCreateDir>div {
+    background-color: rgb(226, 226, 226);
+    box-sizing: border-box;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+
+#panelCreateDir>div h2 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#panelCreateDir>div input[type="text"] {
+    box-sizing: border-box;
+
+    border: none;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+/* El div aparece poco a poco */
+
+#panelCreateDir>div input[type="button"] {
+    width: 49%;
+    float: left;
+    padding: 15px;
+    margin: 0.5%;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all 0.5s ease;
+}
+
+#panelCreateDir>div input[type="button"]:hover,
+#panelCreateDir>div input[type="button"]:active {
+    filter: brightness(0.6);
+}
+
+
+
+
+/*
+
+ /$$$$$$$                                                              /$$                    
+| $$__  $$                                                            |__/                    
+| $$  \ $$  /$$$$$$   /$$$$$$$  /$$$$$$   /$$$$$$  /$$$$$$$   /$$$$$$$ /$$ /$$    /$$ /$$$$$$ 
+| $$$$$$$/ /$$__  $$ /$$_____/ /$$__  $$ /$$__  $$| $$__  $$ /$$_____/| $$|  $$  /$$//$$__  $$
+| $$__  $$| $$$$$$$$|  $$$$$$ | $$  \ $$| $$  \ $$| $$  \ $$|  $$$$$$ | $$ \  $$/$$/| $$$$$$$$
+| $$  \ $$| $$_____/ \____  $$| $$  | $$| $$  | $$| $$  | $$ \____  $$| $$  \  $$$/ | $$_____/
+| $$  | $$|  $$$$$$$ /$$$$$$$/| $$$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$$/| $$   \  $/  |  $$$$$$$
+|__/  |__/ \_______/|_______/ | $$____/  \______/ |__/  |__/|_______/ |__/    \_/    \_______/
+                              | $$                                                            
+                              | $$                                                            
+                              |__/                                                            
+
+*/
+
+
+/*
+
+ /$$      /$$                      /$$ /$$
+| $$$    /$$$                     |__/| $$
+| $$$$  /$$$$  /$$$$$$  /$$    /$$ /$$| $$
+| $$ $$/$$ $$ /$$__  $$|  $$  /$$/| $$| $$
+| $$  $$$| $$| $$  \ $$ \  $$/$$/ | $$| $$
+| $$\  $ | $$| $$  | $$  \  $$$/  | $$| $$
+| $$ \/  | $$|  $$$$$$/   \  $/   | $$| $$
+|__/     |__/ \______/     \_/    |__/|__/
+                                                                                    
+*/
+
+@media (max-width:700px) {
+    body {
+        background-color: var(--mainColor);
+    }
+
+    div>button {
+        font-size: 18px;
+        height: 70px;
+        border: none;
+        margin-top: 10px;
+        background-size: auto 80%;
+        background-repeat: no-repeat;
+    }
+
+    #leftContent {
+        white-space: nowrap;
+        overflow: auto;
+        background-color: var(--carpetColor);
+        height: 110px;
+    }
+
+
+
+    #leftContent>button {
+        text-align: center;
+        margin-left: 10px;
+        /* Icon  */
+        background-position: center;
+    }
+
+    #leftContent>button>p {
+
+        padding-top: 40px;
+    }
+
+    #mainContent {
+        width: 100%;
+    }
+
+    #mainContent>#menu {
+        box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.678);
+    }
+
+    #content {
+        text-align: center;
+        position: absolute;
+        top: 160px;
+        height: 75%;
+    }
+
+    #content>button {
+        text-align: left;
+        width: calc(100% - 10px * 2);
+        border-bottom: 1px solid rgb(202, 202, 202);
+        /* Icon  */
+        ;
+        background-position: right;
+    }
+
+    #content>button:active,
+    #menu>form>input[type="button"]:active {
+        filter: brightness(0.3);
+    }
+
+    #panelCreateDir>div {
+        display: block;
+        position: relative;
+        width: 90%;
+        height: 30%;
+
+        margin: auto;
+        margin-top: 30px;
+        box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.65);
+    }
+
+
+}
+
+/* 
+
+ /$$$$$$$   /$$$$$$ 
+| $$__  $$ /$$__  $$
+| $$  \ $$| $$  \__/
+| $$$$$$$/| $$      
+| $$____/ | $$      
+| $$      | $$    $$
+| $$      |  $$$$$$/
+|__/       \______/ 
+                    
+ */
+
+@media (min-width:700px) {
+    body {
+        background-color: rgb(202, 202, 202);
+    }
+
+    #leftContent {
+        display: block;
+        position: absolute;
+        background-color: var(--carpetColor);
+        width: 70%;
+        height: 170px;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+
+    #mainContent {
+        box-shadow: 1px 14px 21px -11px rgba(0, 0, 0, 0.781);
+        /* position: absolute; */
+        margin-top: 15px;
+        width: 70%;
+    }
+
+
+    #content {
+        position: absolute;
+        background-color: var(--mainColor);
+        text-align: center;
+        bottom: 15px;
+        top: 235px;
+        width: 70%;
+    }
+
+    div>button {
+        width: 100px;
+        height: 100px;
+        margin: 15px;
+        margin-bottom: 20px;
+        border: none;
+        text-align: center;
+        /* Icon  */
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        transition: all 0.2s ease;
+    }
+
+    div>button>p {
+        padding-top: 110%;
+    }
+
+    button:hover,
+    #menu>form>input[type="button"]:hover {
+        filter: brightness(0.4);
+    }
+
+    #panelCreateDir>div {
+        display: block;
+        position: relative;
+        width: 25%;
+        height: 35%;
+
+        margin: auto;
+        margin-top: 30px;
+        box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.65);
+    }
+
+}
+
+/* 
+
+ /$$$$$$                                        
+|_  $$_/                                        
+  | $$    /$$$$$$$  /$$$$$$  /$$$$$$$   /$$$$$$$
+  | $$   /$$_____/ /$$__  $$| $$__  $$ /$$_____/
+  | $$  | $$      | $$  \ $$| $$  \ $$|  $$$$$$ 
+  | $$  | $$      | $$  | $$| $$  | $$ \____  $$
+ /$$$$$$|  $$$$$$$|  $$$$$$/| $$  | $$ /$$$$$$$/
+|______/ \_______/ \______/ |__/  |__/|_______/ 
+                                                
+                                                
+ */
+
+#cancelCreateDir {
+    background-color: rgb(230, 115, 115);
+    color: white;
+}
+
+#confirmCreateDir {
+    background-color: rgb(115, 230, 140);
+    color: white;
+}
+
+
+#buttonCreateDir {
+    background-image: url(../images/createDir.png);
+    float: right;
+
+}
+
+#buttonDeleteDir {
+    background-image: url(../images/deleteDir.png);
+    float: right;
+}
+
+#buttonDeleteFile {
+    background-image: url(../images/deleteFile.png);
+    float: right;
+}
+
+#buttonUpload {
+    background-image: url(../images/upload.png);
+    float: right;
+
+}
+
+#buttonSearch {
+    background-image: url(../images/search.png);
+    float: left;
+}
