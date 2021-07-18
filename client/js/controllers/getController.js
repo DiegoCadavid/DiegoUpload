@@ -14,7 +14,7 @@ const getDir = async (path = "-") => {
             })
             .catch((error) => {
                 console.log(error);
-                alert('Error');
+                // alert('Error');
                 getDir('-');
             });
     };
